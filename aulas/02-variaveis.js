@@ -27,6 +27,8 @@ let outraVariavel = 2.65;
 const _minhaConstante =  "Uma constante qualquer";
 var $minhaVariavel = -5;
 
+// let = local, var = global
+
 // errado
 // var @variavel = 4;
 
