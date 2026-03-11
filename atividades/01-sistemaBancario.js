@@ -23,15 +23,15 @@ console.log(nome, ", esses são os dados da sua conta no", nomeBanco, ":\n",
     "Saldo da conta: R$", saldoConta, "\n"
 );
 
-saldoConta = saldoConta + 200
+saldoConta += 200
 console.log("11/03/2026, 07:48:", nome, ", um pix do Zeca Abobrinha foi recebido na sua conta do", nomeBanco, "no valor de R$ 200 reais. Novo saldo: R$", saldoConta);
-saldoConta = saldoConta - 1150
+saldoConta -+ 1150
 console.log("11/03/2026, 12:32:", nome, ", uma compra foi realizada sua conta do", nomeBanco, "no valor de R$ 1150 reais. Novo saldo: R$", saldoConta);
-saldoConta = saldoConta + 50
+saldoConta += 50
 console.log("13/03/2026, 15:21:", nome, ", um pix da Josefina Andreia foi recebido na sua conta do", nomeBanco, "no valor de R$ 50 reais. Novo saldo: R$", saldoConta);
-saldoConta = saldoConta + 700
+saldoConta += 700
 console.log("14/03/2026, 23:11:", nome, ", um pix do Richarlison Jaca foi recebido na sua conta do", nomeBanco, "no valor de R$ 700 reais. Novo saldo: R$", saldoConta);
-saldoConta = saldoConta - 175
+saldoConta -= 175
 console.log("17/03/2026, 09:57:", nome, ", uma compra foi realizada sua conta do", nomeBanco, "no valor de R$ 175 reais. Novo saldo: R$", saldoConta);
 
 console.log("")
