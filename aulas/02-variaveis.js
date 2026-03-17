@@ -8,7 +8,9 @@ var idade = 53;
 // pular linha é \n
 console.log("Meu nome é", nome, "e eu tenho", idade, "anos\n");
 
-console.log("----------------------------------------------------------------------------------------------------------------------------");
+console.log(
+  "----------------------------------------------------------------------------------------------------------------------------",
+);
 
 // case sensitive
 console.log("");
@@ -24,7 +26,7 @@ let teste = "Variável teste";
 
 let MinhaVariavel = 10;
 let outraVariavel = 2.65;
-const _minhaConstante =  "Uma constante qualquer";
+const _minhaConstante = "Uma constante qualquer";
 var $minhaVariavel = -5;
 
 // let = local, var = global
@@ -32,7 +34,7 @@ var $minhaVariavel = -5;
 // errado
 // var @variavel = 4;
 
- // variáveis lógicas
+// variáveis lógicas
 
 var nome = "Gerosvaldo";
 var rico = false;
@@ -52,5 +54,4 @@ if (rico == true) {
 }
 */
 
-console.log("Nome:", nome, "| É professor?", professor, "| É rico?", rico)
-
+console.log("Nome:", nome, "| É professor?", professor, "| É rico?", rico);

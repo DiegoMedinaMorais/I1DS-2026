@@ -89,10 +89,10 @@ console.log(
 let n1 = "20";
 let n2 = 10;
 
-console.log(n1+n2);
-console.log("20"+n2);
+console.log(n1 + n2);
+console.log("20" + n2);
 
 let nome1 = "Cristiano";
 let nome2 = " de Paula";
 
-console.log(nome1+nome2);
+console.log(nome1 + nome2);
