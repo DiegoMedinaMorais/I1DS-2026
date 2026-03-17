@@ -6,7 +6,7 @@ console.log(dinos);
 console.table(dinos);
 
 // lenght = tamanho do array (quantidade de elementos)
-console.log("O vetor tem", dinos.length, "elementos.");
+console.log("O array tem", dinos.length, "elementos.");
 
 // imprimir elementos a partir do index
 console.log(dinos[2]);
@@ -14,12 +14,12 @@ console.log(dinos[2]);
 // push () - adicionar um novo elemento no final da final
 dinos.push("Anquilossauro");
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 
 // unshift - adiciona um novo elemento no início da fila
 dinos.unshift("Velociraptor");
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 
 // obter um elemento a partir do index
 
@@ -27,20 +27,20 @@ console.log("1ª posição:", dinos[0]);
 console.log("4ª posição:", dinos[3]);
 console.log("20ª posição (não existe):", dinos[19]);
 
-// pop - remove um elemento do final do vetor (último elemento)
+// pop - remove um elemento do final do array (último elemento)
 dinos.pop();
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 
-// shift - remove um elemento do início do vetor (primeiro elemento)
+// shift - remove um elemento do início do array (primeiro elemento)
 dinos.shift();
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 
 // splice - remove um elemento a partir de um index, e também precisa ser informada a quantidade de registro a ser excluído a partir do index
 dinos.splice(1, 1); // remove somente o segundo item da lista
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 
 dinos.push("Pterodáctilo");
 dinos.push("Estegossauro");
@@ -51,7 +51,7 @@ dinos.push("Argentinossauro");
 let procurado = "Estegossauro";
 let index = dinos.indexOf(procurado);
 console.table(dinos);
-console.log("O vetor agora tem", dinos.length, "elementos.");
+console.log("O array agora tem", dinos.length, "elementos.");
 console.log("O", procurado, "está no index", index);
 
 procurado = "Cristianossauro";
@@ -69,3 +69,8 @@ dinos.splice(index, 1);
 dinos[1] = "Carnotauro";
 console.table(dinos);
 
+// criar uma cópia do array
+let novaLista = dinos.slice(); // cópia completa do array dinos
+console.table(novaLista);
+let listaParcial = dinos.slice(1, 3); // cria uma cópia do vetor dinos a partir do indice onde começa e onde termina a copia
+console.table(listaParcial);
