@@ -34,7 +34,7 @@ switch (menuSelecionado) {
     break;
 }
 
-const pi = 3.1415683
+const pi = 3.1415683;
 
-console.log(pi)
-console.log(pi.toFixed(2)) // coloca números com 2 casas decimais somente
+console.log(pi);
+console.log(pi.toFixed(2)); // coloca números com 2 casas decimais somente
