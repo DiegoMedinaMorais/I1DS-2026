@@ -79,7 +79,7 @@ console.log(mensagem);
 
 let preco = 500;
 let resultado = preco <= 100 ? "Barato" : "Caro";
-console.log("Preço:", preco, "-", resultado)
+console.log("Preço:", preco, "-", resultado);
 // código acima faz o mesmo que o código abaixo
 
 if (preco <= 100) {
@@ -87,4 +87,19 @@ if (preco <= 100) {
 } else {
   resultado = "Caro";
 }
-console.log("Preço:", preco, "-", resultado)
+console.log("Preço:", preco, "-", resultado);
+
+// jeito de realizar atividade (04, sistema de voto)
+
+function final(n1, n2, n3, n4) {
+  let m = (n1 + n2 + n3 + n4) / 4;
+  let s;
+
+  if (m < 5) s = "Reprovado";
+  else if (m < 7) s = "Recuperação";
+  else s = "Aprovado";
+
+  return "Média: " + m + " = Situação: " + s;
+}
+
+console.log(final(7, 8, 6, 5));

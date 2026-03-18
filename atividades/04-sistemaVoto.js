@@ -8,15 +8,13 @@
 */
 
 function podeVotar(idade) {
-  let resultado;
   if (idade < 16) {
-    resultado = "Não pode votar";
+    return "Não pode votar";
   } else if (idade < 18 || idade >= 70) {
-    resultado = "Voto opcional";
+    return "Voto opcional";
   } else {
-    resultado = "Voto obrigatório";
+    return "Voto obrigatório";
   }
-  return resultado;
 }
 
 let idade = 87;
@@ -44,7 +42,7 @@ retorne uma mensagem informando sua situação.
 function analisaNota(nota) {
   if (nota < 5) {
     return "Reprovado";
-  } else if (nota >= 5 && nota <= 6.9) {
+  } else if (nota <= 6.9) {
     return "Necessita recuperação";
   } else {
     return "Aprovado";
@@ -54,28 +52,18 @@ function analisaNota(nota) {
 let nota = 6;
 console.log("Olá aluno. Você tirou", nota + ", resultado:", analisaNota(nota));
 
-// extra | receber 4 notas, calcular media e dar resultado final
+// EXTRA | receber 4 notas, calcular média e dar resultado final
 
 function analisaNotaFinal(nota1, nota2, nota3, nota4) {
   let media = (nota1 + nota2 + nota3 + nota4) / 4;
   if (media < 5) {
     return "Reprovado";
-  } else if (media >= 5 && media <= 6.9) {
+  } else if (media <= 6.9) {
     return "Necessita recuperação";
   } else {
     return "Aprovado";
   }
 }
 
-let nota1 = 6;
-let nota2 = 8;
-let nota3 = 10;
-let nota4 = 3;
+console.log("Olá aluno. Nesse ano seu resultado final é de:", analisaNotaFinal(6, 8, 10, 3));
 
-console.log(
-  "Olá aluno. Nesse ano você tirou",
-  nota1 + ", " + nota2 + ", " + nota3 + ", e " + nota4 + ", com média de",
-  (nota1 + nota2 + nota3 + nota4) / 4 + ".",
-  "Resultado final:",
-  analisaNotaFinal(nota1, nota2, nota3, nota4),
-);
