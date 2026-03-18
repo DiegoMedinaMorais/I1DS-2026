@@ -60,8 +60,8 @@ console.log("Olá aluno. Você tirou", nota + ", resultado:", analisaNota(nota))
 
 function analisaNotaFinal(nota1, nota2, nota3, nota4) {
   let resultado;
-  let media = (nota1 + nota2 + nota3 + nota4) / 4
-   if (media < 5) {
+  let media = (nota1 + nota2 + nota3 + nota4) / 4;
+  if (media < 5) {
     resultado = "Reprovado";
   } else if (media >= 5 && media <= 6.9) {
     resultado = "Necessita recuperação";
@@ -79,7 +79,7 @@ let nota4 = 3;
 console.log(
   "Olá aluno. Nesse ano você tirou",
   nota1 + ", " + nota2 + ", " + nota3 + ", e " + nota4 + ", com média de",
-  (nota1 + nota2 + nota3 + nota4) / 4 +".",
+  (nota1 + nota2 + nota3 + nota4) / 4 + ".",
   "Resultado final:",
   analisaNotaFinal(nota1, nota2, nota3, nota4),
 );
