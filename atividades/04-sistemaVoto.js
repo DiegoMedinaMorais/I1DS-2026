@@ -42,33 +42,29 @@ retorne uma mensagem informando sua situação.
 */
 
 function analisaNota(nota) {
-  let resultado;
   if (nota < 5) {
-    resultado = "Reprovado";
+    return "Reprovado";
   } else if (nota >= 5 && nota <= 6.9) {
-    resultado = "Necessita recuperação";
+    return "Necessita recuperação";
   } else {
-    resultado = "Aprovado";
+    return "Aprovado";
   }
-  return resultado;
 }
 
 let nota = 6;
 console.log("Olá aluno. Você tirou", nota + ", resultado:", analisaNota(nota));
 
-// extra, receber 4 notas e calcular media e dar situação final
+// extra | receber 4 notas, calcular media e dar resultado final
 
 function analisaNotaFinal(nota1, nota2, nota3, nota4) {
-  let resultado;
   let media = (nota1 + nota2 + nota3 + nota4) / 4;
   if (media < 5) {
-    resultado = "Reprovado";
+    return "Reprovado";
   } else if (media >= 5 && media <= 6.9) {
-    resultado = "Necessita recuperação";
+    return "Necessita recuperação";
   } else {
-    resultado = "Aprovado";
+    return "Aprovado";
   }
-  return resultado;
 }
 
 let nota1 = 6;
