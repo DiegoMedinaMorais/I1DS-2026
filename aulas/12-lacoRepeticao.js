@@ -38,8 +38,7 @@ let numeros = [5, 6, 8, 14, 0, 6, 9, 7, 2, 10];
 let soma = 0;
 
 for (let i = 0; i < numeros.length; i++) {
-  soma += numeros[i]
+  soma += numeros[i];
 }
 
-console.log(soma)
-
+console.log(soma);
