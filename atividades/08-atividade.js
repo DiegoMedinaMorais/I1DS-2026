@@ -17,7 +17,7 @@ a matriz antes e após a multiplicação.
 */
 
 // 1)
-console.log("----------")
+console.log("----------");
 
 let matriz1 = [
   [3, 5, 8],
@@ -25,16 +25,17 @@ let matriz1 = [
   [7, 1, 4],
 ];
 
-console.log("Matriz:")
+console.log("Matriz:");
 console.table(matriz1);
 
 for (let linha = 0; linha < matriz1.length; linha++) {
   for (let coluna = 0; coluna < matriz1[0].length; coluna++) {
-    if (linha == coluna) console.log("Elemento da diagonal:", matriz1[linha][coluna])
+    if (linha == coluna)
+      console.log("Elemento da diagonal:", matriz1[linha][coluna]);
   }
 }
 
-console.log("----------")
+console.log("----------");
 
 // 2)
 
@@ -46,7 +47,7 @@ let matriz2 = [
 
 console.log("Matriz inicial:");
 console.table(matriz2);
-console.log("----------")
+console.log("----------");
 
 for (let linha = 0; linha < matriz2.length; linha++) {
   for (let coluna = 0; coluna < matriz2[0].length; coluna++) {
@@ -56,4 +57,4 @@ for (let linha = 0; linha < matriz2.length; linha++) {
 
 console.log("Matriz nultiplicada:");
 console.table(matriz2);
-console.log("----------")
+console.log("----------");

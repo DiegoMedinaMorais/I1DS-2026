@@ -49,7 +49,6 @@ console.table(matriz);
 
 for (let linha = 0; linha < matriz.length; linha++) {
   for (let coluna = 0; coluna < matriz[0].length; coluna++) {
-    console.log("Matriz["+linha+",", coluna+"] =", matriz[linha][coluna])
-   }
+    console.log("Matriz[" + linha + ",", coluna + "] =", matriz[linha][coluna]);
+  }
 }
-
