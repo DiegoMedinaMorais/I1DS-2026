@@ -28,7 +28,6 @@ let matriz1 = [
 console.log("Matriz:")
 console.table(matriz1);
 
-let numDiagonal = 0
 for (let linha = 0; linha < matriz1.length; linha++) {
   for (let coluna = 0; coluna < matriz1[0].length; coluna++) {
     if (linha == coluna) console.log("Elemento da diagonal:", matriz1[linha][coluna])
