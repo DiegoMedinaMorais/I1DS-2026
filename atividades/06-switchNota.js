@@ -88,7 +88,7 @@ let n4 = 6;
 
 let m = (n1 + n2 + n3 + n4) / 4;
 
-// usando switch case com boolean (true)
+// usando switch case com boolean (true) faz possível o uso de operadores
 switch (true) {
   case m < 5:
     console.log("Aluno reprovado");
