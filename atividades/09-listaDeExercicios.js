@@ -358,6 +358,35 @@ switch (selecao) {
     console.log("Menu dividir foi selecionado.");
     break;
   default:
-      console.log("Não foi possível encontrar esse menu.");
+    console.log("Não foi possível encontrar esse menu.");
+    break;
+}
+
+/*
+25. Sistema de avaliação:
+       A → Excelente
+       B → Bom
+       C → Regular
+       D → Ruim
+*/
+
+let avaliacao = "A";
+
+switch (avaliacao) {
+  case "A":
+    console.log("Seu resultado foi", avaliacao+", excelente.");
+    break;
+  case "B":
+    console.log("Seu resultado foi", avaliacao+", bom.");
+    break;
+  case "C":
+    console.log("Seu resultado foi", avaliacao+", regular.");
+    break;
+  case "D":
+    console.log("Seu resultado foi", avaliacao+", ruim.");
+    break;
+    
+  default:
+    console.log("Não foi possível encontrar seu resultado.");
     break;
 }
