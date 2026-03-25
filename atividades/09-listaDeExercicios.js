@@ -362,31 +362,127 @@ switch (selecao) {
     break;
 }
 
-/*
-25. Sistema de avaliação:
-       A → Excelente
-       B → Bom
-       C → Regular
-       D → Ruim
-*/
-
 let avaliacao = "A";
 
 switch (avaliacao) {
   case "A":
-    console.log("Seu resultado foi", avaliacao+", excelente.");
+    console.log("Seu resultado foi", avaliacao + ", excelente.");
     break;
   case "B":
-    console.log("Seu resultado foi", avaliacao+", bom.");
+    console.log("Seu resultado foi", avaliacao + ", bom.");
     break;
   case "C":
-    console.log("Seu resultado foi", avaliacao+", regular.");
+    console.log("Seu resultado foi", avaliacao + ", regular.");
     break;
   case "D":
-    console.log("Seu resultado foi", avaliacao+", ruim.");
+    console.log("Seu resultado foi", avaliacao + ", ruim.");
     break;
-    
+
   default:
     console.log("Não foi possível encontrar seu resultado.");
     break;
+}
+
+/*
+PARTE 4 – Laço FOR (26 a 35) 🚨
+(TODOS DEVEM USAR for)
+26. Exiba números de 1 a 100.
+27. Exiba números de 100 até 1.
+28. Exiba apenas números pares de 1 a 50.
+29. Exiba apenas números ímpares de 1 a 50.
+30. Calcule a soma de 1 até 100.
+31. Calcule o fatorial de um número.
+32. Exiba a tabuada de um número.
+33. Conte quantos números pares existem entre 1 e 100.
+34. Exiba todos os múltiplos de 5 entre 0 e 100.
+35. Crie um programa que desenhe no console:
+       *
+       **
+       ***
+       ****
+       *****
+*/
+
+console.log("");
+console.log("PARTE 4 – Laço FOR (26 a 35) ------------------\n");
+
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+
+for (let i = 101; i == 1; i--) {
+  console.log(i);
+}
+
+for (let i = 1; i <= 50; i++) {
+  if (i % 2 == 0) console.log(i);
+}
+
+for (let i = 1; i <= 50; i++) {
+  if (i % 2 != 0) console.log(i);
+}
+
+let soma = 0;
+for (let i = 1; i <= 100; i++) {
+  soma += i;
+}
+console.log(soma);
+
+let nParaFat = 15;
+let fatorial = 1;
+
+for (let i = 1; i <= nParaFat; i++) {
+  fatorial *= i;
+}
+console.log(fatorial);
+
+let nParaTab = 2;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(nParaTab * i);
+}
+
+let somaPar = 0;
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 == 0) somaPar++;
+}
+
+console.log("Entre 1 e 100 há", somaPar, "numeros pares.");
+
+let somaMult5 = 0;
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 5 == 0) somaMult5++;
+}
+
+console.log("Entre 1 e 100 há", somaMult5, "numeros múltiplos de 5.");
+
+for (let i = 0; i < 10; i++) {
+  let ast = "";
+  for (let i2 = 0; i2 < i; i2++) {
+    ast += "*";
+  }
+  console.log(ast);
+}
+
+/*
+PARTE 5 – Vetores (36 a 42) 🚨
+(USAR for)
+36. Crie um vetor com 10 números e exiba todos.
+37. Calcule a soma dos elementos do vetor. ------- TIRA ISSO DEPOIS
+38. Calcule a média do vetor.
+39. Encontre o maior valor do vetor.
+40. Encontre o menor valor do vetor.
+41. Conte quantos números são pares e ímpares.
+42. Multiplique todos os elementos por 2.
+*/
+
+console.log("");
+console.log("PARTE 5 – Vetores (36 a 42) ------------------\n");
+
+let array = [10, 8, 9, 7, 6, 4, 2, 6, 8, 17];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i]);
 }
