@@ -655,38 +655,17 @@ for (let linha = 0; linha < matriz.length; linha++) {
 console.log("A quantidade de elementos maiores que são 10:", somaMaior10);
 
 let stringArray = "";
+
 for (let linha = 0; linha < matriz.length; linha++) {
+  stringArray += "[";
   for (let coluna = 0; coluna < matriz[0].length; coluna++) {
-    if (linha == 0) {
-      if (coluna == 0) {
-        stringArray += "[" + matriz[linha][coluna];
-      } else if (coluna == 2) {
-        stringArray += "," + matriz[linha][coluna] + "]";
-      } else {
-        stringArray += "," + matriz[linha][coluna];
-      }
-    }
-    if (linha == 1) {
-      if (coluna == 0) {
-        stringArray += "\n[" + matriz[linha][coluna];
-      } else if (coluna == 2) {
-        stringArray += "," + matriz[linha][coluna] + "]";
-      } else {
-        stringArray += "," + matriz[linha][coluna];
-      }
-    }
-    if (linha == 2) {
-      if (coluna == 0) {
-        stringArray += "\n[" + matriz[linha][coluna];
-      } else if (coluna == 2) {
-        stringArray += "," + matriz[linha][coluna] + "]";
-      } else {
-        stringArray += "," + matriz[linha][coluna];
-      }
-    }
+    stringArray += " " + matriz[coluna][linha] + " "
   }
+  stringArray += "]\n"
 }
+
 console.log(stringArray);
+
 /*
 Acentos: á à â ã ä é è ê ë í ì î ï ó ò ô õ ö ú ù û ü ç ñ
 Maiúsculas: Á À Â Ã Ä É È Ê Ë Í Ì Î Ï Ó Ò Ô Õ Ö Ú Ù Û Ü Ç Ñ 
