@@ -481,42 +481,213 @@ PARTE 5 – Vetores (36 a 42) 🚨
 console.log("");
 console.log("PARTE 5 – Vetores (36 a 42) ------------------\n");
 
+console.log("Os elementos do array são:");
 let array = [10, 8, 9, 7, 6, 4, 2, 6, 8, 17];
 
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
 
-let soma2 = 0
+let soma2 = 0;
 
 for (let i = 0; i < array.length; i++) {
-  soma2+=array[i]
+  soma2 += array[i];
 }
-console.log(soma2)
+console.log("À soma dos elementos do array é:", soma2);
 
-let soma3 = 0
+let soma3 = 0;
 
 for (let i = 0; i < array.length; i++) {
-  soma3+=array[i]
+  soma3 += array[i];
 }
-console.log(soma3/array.length)
+console.log("À média dos elementos do array é:", soma3 / array.length);
 
-let maiorNumero = 0
+let maiorNumero = 0;
 
 for (let i = 0; i < array.length; i++) {
   if (array[i] > maiorNumero) {
-    maiorNumero = array[i]
+    maiorNumero = array[i];
   }
 }
 
-console.log(maiorNumero)
+console.log("Maior número do array:", maiorNumero);
 
-let menorNumero2 = 99999
+let menorNumero2 = Number.MAX_VALUE; // maior número representável em javaScript
 
 for (let i = 0; i < array.length; i++) {
   if (array[i] < menorNumero2) {
-    menorNumero2 = array[i]
+    menorNumero2 = array[i];
   }
 }
 
-console.log(menorNumero2)
+console.log("Menor número do array:", menorNumero2);
+
+let pares = 0;
+let impares = 0;
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] % 2 == 0) {
+    pares++;
+  } else {
+    impares++;
+  }
+}
+
+console.log("Números pares no array:", pares);
+console.log("Números impares no array:", impares);
+
+console.log("Array não multiplicado:");
+console.table(array);
+
+for (let i = 0; i < array.length; i++) {
+  array[i] *= 2;
+}
+
+console.log("Array multiplicado:");
+console.table(array);
+
+/*
+PARTE 6 – Matrizes (43 a 50) 🚨
+(USAR for ANINHADO)
+43. Crie uma matriz 3x3 e exiba todos os valores.
+44. Exiba a diagonal principal de uma matriz.
+45. Exiba a diagonal secundária.
+46. Some todos os elementos da matriz.
+47. Encontre o maior valor da matriz.
+48. Multiplique todos os valores por um número X.
+49. Conte quantos valores são maiores que 10.
+50. Crie uma matriz e exiba no formato:
+[ 1 2 3 ]
+[ 4 5 6 ]
+[ 7 8 9 ]
+*/
+
+console.log("");
+console.log("PARTE 6 – Matrizes (43 a 50) ------------------\n");
+
+let matriz = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.table(matriz);
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    console.log(
+      "Matriz[" + linha + "," + coluna + "] =",
+      matriz[linha][coluna],
+    );
+  }
+}
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    if (linha == coluna) {
+      console.log(
+        "Elemento que faz parte da diagonal principal da matriz:",
+        matriz[linha][coluna],
+      );
+    }
+  }
+}
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    if (
+      (linha == 0 && coluna == 2) ||
+      (linha == 1 && coluna == 1) ||
+      (linha == 2 && coluna == 0)
+    ) {
+      console.log(
+        "Elemento que faz parte da diagonal secundária da matriz:",
+        matriz[linha][coluna],
+      );
+    }
+  }
+}
+
+let soma4 = 0;
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    soma4 += matriz[linha][coluna];
+  }
+}
+console.log("A soma de todos os elementos da matriz é:", soma4);
+
+let maiorNumero2 = 0;
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    if (matriz[linha][coluna] > maiorNumero2) {
+      maiorNumero2 = matriz[linha][coluna];
+    }
+  }
+}
+
+console.log("O maior número da matriz é", maiorNumero2);
+
+console.log("Matriz não multiplicada:");
+console.table(matriz);
+
+let numeroX = 3;
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    matriz[linha][coluna] *= numeroX;
+  }
+}
+
+console.log("Matriz multiplicada:");
+console.table(matriz);
+
+let somaMaior10 = 0;
+
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    if (matriz[linha][coluna] > 10) {
+      somaMaior10++;
+    }
+  }
+}
+console.log("A quantidade de elementos maiores que são 10:", somaMaior10);
+
+let stringArray = "";
+for (let linha = 0; linha < matriz.length; linha++) {
+  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+    if (linha == 0) {
+      if (coluna == 0) {
+        stringArray += "[" + matriz[linha][coluna];
+      } else if (coluna == 2) {
+        stringArray += "," + matriz[linha][coluna] + "]";
+      } else {
+        stringArray += "," + matriz[linha][coluna];
+      }
+    }
+    if (linha == 1) {
+      if (coluna == 0) {
+        stringArray += "\n[" + matriz[linha][coluna];
+      } else if (coluna == 2) {
+        stringArray += "," + matriz[linha][coluna] + "]";
+      } else {
+        stringArray += "," + matriz[linha][coluna];
+      }
+    }
+    if (linha == 2) {
+      if (coluna == 0) {
+        stringArray += "\n[" + matriz[linha][coluna];
+      } else if (coluna == 2) {
+        stringArray += "," + matriz[linha][coluna] + "]";
+      } else {
+        stringArray += "," + matriz[linha][coluna];
+      }
+    }
+  }
+}
+console.log(stringArray);
+/*
+Acentos: á à â ã ä é è ê ë í ì î ï ó ò ô õ ö ú ù û ü ç ñ
+Maiúsculas: Á À Â Ã Ä É È Ê Ë Í Ì Î Ï Ó Ò Ô Õ Ö Ú Ù Û Ü Ç Ñ 
+*/
