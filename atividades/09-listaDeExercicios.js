@@ -470,7 +470,7 @@ for (let i = 0; i < 10; i++) {
 PARTE 5 – Vetores (36 a 42) 🚨
 (USAR for)
 36. Crie um vetor com 10 números e exiba todos.
-37. Calcule a soma dos elementos do vetor. ------- TIRA ISSO DEPOIS
+37. Calcule a soma dos elementos do vetor. 
 38. Calcule a média do vetor.
 39. Encontre o maior valor do vetor.
 40. Encontre o menor valor do vetor.
@@ -486,3 +486,37 @@ let array = [10, 8, 9, 7, 6, 4, 2, 6, 8, 17];
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
+
+let soma2 = 0
+
+for (let i = 0; i < array.length; i++) {
+  soma2+=array[i]
+}
+console.log(soma2)
+
+let soma3 = 0
+
+for (let i = 0; i < array.length; i++) {
+  soma3+=array[i]
+}
+console.log(soma3/array.length)
+
+let maiorNumero = 0
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] > maiorNumero) {
+    maiorNumero = array[i]
+  }
+}
+
+console.log(maiorNumero)
+
+let menorNumero2 = 99999
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] < menorNumero2) {
+    menorNumero2 = array[i]
+  }
+}
+
+console.log(menorNumero2)
