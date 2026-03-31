@@ -615,6 +615,7 @@ for (let linha = 0; linha < matriz.length; linha++) {
     soma4 += matriz[linha][coluna];
   }
 }
+
 console.log("A soma de todos os elementos da matriz é:", soma4);
 
 let maiorNumero2 = 0;
@@ -628,6 +629,7 @@ for (let linha = 0; linha < matriz.length; linha++) {
 }
 
 console.log("O maior número da matriz é", maiorNumero2);
+
 console.log("Matriz não multiplicada:");
 console.table(matriz);
 
@@ -651,6 +653,8 @@ for (let linha = 0; linha < matriz.length; linha++) {
     }
   }
 }
+
+
 console.log("A quantidade de elementos maiores que são 10:", somaMaior10);
 
 let stringArray = "";
@@ -658,8 +662,11 @@ let stringArray = "";
 for (let coluna = 0; coluna < matriz[0].length; coluna++) {
   stringArray += "[";
   for (let linha = 0; linha < matriz.length; linha++) {
-    stringArray += " " + matriz[coluna][linha] + " "
+    stringArray += " " + matriz[coluna][linha] + " ";
   }
-  stringArray += "]\n"
+  stringArray += "]\n";
 }
+
 console.log(stringArray);
+
+// 👍
