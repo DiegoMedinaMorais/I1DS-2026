@@ -628,7 +628,6 @@ for (let linha = 0; linha < matriz.length; linha++) {
 }
 
 console.log("O maior número da matriz é", maiorNumero2);
-
 console.log("Matriz não multiplicada:");
 console.table(matriz);
 
@@ -656,17 +655,11 @@ console.log("A quantidade de elementos maiores que são 10:", somaMaior10);
 
 let stringArray = "";
 
-for (let linha = 0; linha < matriz.length; linha++) {
+for (let coluna = 0; coluna < matriz[0].length; coluna++) {
   stringArray += "[";
-  for (let coluna = 0; coluna < matriz[0].length; coluna++) {
+  for (let linha = 0; linha < matriz.length; linha++) {
     stringArray += " " + matriz[coluna][linha] + " "
   }
   stringArray += "]\n"
 }
-
 console.log(stringArray);
-
-/*
-Acentos: á à â ã ä é è ê ë í ì î ï ó ò ô õ ö ú ù û ü ç ñ
-Maiúsculas: Á À Â Ã Ä É È Ê Ë Í Ì Î Ï Ó Ò Ô Õ Ö Ú Ù Û Ü Ç Ñ 
-*/
