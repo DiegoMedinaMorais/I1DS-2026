@@ -654,7 +654,6 @@ for (let linha = 0; linha < matriz.length; linha++) {
   }
 }
 
-
 console.log("A quantidade de elementos maiores que são 10:", somaMaior10);
 
 let stringArray = "";
