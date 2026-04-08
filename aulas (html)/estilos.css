@@ -1,0 +1,29 @@
+
+.my-text {
+    color: white
+}
+#header {
+    background-color: red;
+    height: 130px;
+    text-align: center;
+}
+#main {
+    background-color: #ff00f2;
+    height: 350px;
+}
+#aside {
+    background-color: #005eff;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+#content {
+    background-color: #26ff00;
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+#footer {
+    background-color: grey;
+    height: 30px;
+}
