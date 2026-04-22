@@ -1,0 +1,42 @@
+/* reset da página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 300px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/bg-desktop-light.jpg);
+    background-size: cover;
+    color: black;
+}
+
+#profile{
+    width: 90px;
+    margin: 3px;
+}
+
+#textoProfile{
+    font-size: 16px;
+}
+
+#links{
+    button{
+        background-color: rgba(0, 0, 0, 0.049); border-color: black; border-radius: 10px; height: 45px; width: 400px; margin: 10px;
+    };
+}
+
+#links2{
+    button{
+        background-color: transparent; border-color: transparent;
+    }
+}
+
+#textoDeBaixo{
+    font-size: 12px;
+}
