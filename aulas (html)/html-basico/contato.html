@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+</head>
+<body>
+    <h3>Formulário básico</h3>
+    <form method="get" action="contato.html">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome..."/>
+        <input type="submit" value="Enviar"/> <!-- botão de envio-->
+    </form>
+
+    <hr>
+    <h3>Formulário de cadastro</h3>
+    <form action="get" action="#">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="nomeCompleto">Nome completo</label>
+            <input type="text" name="nomeCompleto" placeholder="Digite seu nome completo">
+            <br>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu E-mail">
+            <br>
+            <label for="cpf">CPF</label>
+            <input type="number" name="cpf" placeholder="Digite seu CPF">
+            
+
+        </fieldset>
+
+        <button type="submit">Enviar dados</button>
+        <button type="reset">Limpar o formulário</button>
+
+
+    </form>
+</body>
+</html>
