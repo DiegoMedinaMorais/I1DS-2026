@@ -16,18 +16,55 @@
     <hr>
     <h3>Formulário de cadastro</h3>
     <form action="get" action="#">
+
         <fieldset>
             <legend>Dados pessoais</legend>
             <label for="nomeCompleto">Nome completo</label>
             <input type="text" name="nomeCompleto" placeholder="Digite seu nome completo">
-            <br>
+            <br/>
             <label for="email">E-mail</label>
             <input type="email" name="email" placeholder="Digite seu E-mail">
-            <br>
+            <br/>
             <label for="cpf">CPF</label>
             <input type="number" name="cpf" placeholder="Digite seu CPF">
-            
+            <br/>
+        </fieldset>
 
+        <fieldset>
+            <legend>Outras informações</legend>
+            <label for="dataNascimento">Data de nascimento</label>
+            <input type="date" name="dataNascimento">
+            <br/>
+            <label for="dataCadastro">Data de nascimento</label>
+            <input type="datetime-local" name="dataCadastro">
+            <br/>
+            <input type="checkbox" name="escolaSesi">
+            <label for="escolaSesi">SESI</label>
+            <input type="checkbox" name="escolaSenai">
+            <label for="escolaSenai">SENAI</label>
+            <input type="checkbox" name="escola">
+            <label for="escola">Nenhuma</label>
+            <input type="checkbox" name="todas">
+            <label for="todas">Todas as anteriores</label>
+            <br/>
+            <input type="radio" name="sexo">
+            <label for="sexo">Masculino</label>
+            <label for="sexo">Feminino</label>
+            <label for="sexo">Prefiro não informar
+            <br/>
+            <label for="curso">Escolha seu curso</label>
+            <select name="curso">
+                <option value="0">HTML</option>
+                <option value="1">CSS</option>
+                <option value="2">JavaScript</option>
+            </select>
+
+            <br>
+
+            <label for="comentarios">Comentários</label>
+            <textarea name="comentarios" placeholder="Digite seu comentário..." rows="5"cols="120"></textarea>
+
+            </label>
         </fieldset>
 
         <button type="submit">Enviar dados</button>
