@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini sistema</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- sidebar -->
+         <aside class="sidebar">
+            <h2>Sistema</h2>
+            <a href="#">Dashboard</a>
+            <a href="#">Cadastros</a>
+            <a href="#">Relatórios</a>
+         </aside>
+
+        <!-- conteúdo -->
+         <main class="content">
+            <header class="topbar">
+                <h1>Cadastro de usuários</h1>
+            </header>
+
+            <!-- formulário de cadastro -->
+            <section class="card">
+                <form onsubmit="cadastrar(event)">
+                    <input type="text" id="nome" placeholder="Digite seu nome...">
+                    <input type="text" id="email" placeholder="Digite seu email...">
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </section>
+
+        <!-- lista de usuários cadastrados -->
+        <section class="card">
+            <h2>Usuários cadastrados</h2>
+            <p id="contagem">0</p>
+
+            <ul id="lista"></ul>
+        </section>
+
+         </main>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

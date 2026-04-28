@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #e7efff;
+}
+
+/* layout */
+.container{
+    display: flex;
+}
+
+/* sidebar */
+.sidebar{
+    width: 220px;
+    height: 100dvh;
+    background-color: #1d2943;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    background-color: rgb(46, 60, 98);
+}
+
+/* conteúdo */
+.content{
+    margin-left: 220px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* header */
+.topbar{
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* card */
+.card{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+
+}
+
+/* formulário */
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* botão */
+button{
+    background-color: #2563eb;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    color: white;
+    margin-top: 8px;
+}
+
+button:hover{
+    background-color: #1d1ac7;
+    transform: scale(1.02);
+}
+
+/* lista */
+ul{
+    list-style: none;
+}
+li{
+    background-color: #f1f5f9;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+li:hover{
+    background-color: #e2e8f0;
+    transform: translateX(5px);
+}
+
+/* botão de delete */
+.removeButton{
+    background-color: red;
+}
+.removeButton:hover{
+    background-color: rgb(188, 0, 0);
+}
+
+/* botão de editar */
+.editButton{
+    background-color: rgb(97, 202, 255);
+}
+.editButton:hover{
+    background-color: rgb(63, 144, 185);
+}
