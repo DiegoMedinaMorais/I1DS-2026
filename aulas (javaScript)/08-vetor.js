@@ -1,6 +1,6 @@
 // criando variáveis do tipo array (vetor)
-
 let dinos = ["Tiranossauro Rex", "Estegossauro", "Brontossauro", "Tricerátops"];
+
 console.log(dinos);
 // imprime dados em forma de tabela
 console.table(dinos);
