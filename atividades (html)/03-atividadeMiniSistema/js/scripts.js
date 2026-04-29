@@ -13,15 +13,8 @@ const remove = (id) => {
 }
 
 const edit = (id) => {
-    let lista = document.getElementById("lista")
-    let elemento = document.getElementById(id)
-    let contagem = lista.childElementCount
     let nome = document.getElementById("nome")
     let email = document.getElementById("email")
-
-    lista.removeChild(elemento)
-
-    document.getElementById("contagem").innerText = contagem
 
     nome.value = infoNome[id-1]
     email.value = infoEmail[id-1]

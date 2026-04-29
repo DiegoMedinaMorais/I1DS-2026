@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #e7efff;
+    padding: 24px;
+    text-align: center;
+}
+
+h1{
+    color: #111827;
+    padding: 8px;
+}
+
+.card{
+    background-color: rgb(218, 229, 255);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#ex01{
+    background-color: #bed7ff;
+    width: 500px;
+    margin: 8px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contador {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.grupoBotoes{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+button{
+    width: 80px;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-size: 24px;
+}
+
+#btnMenos{
+    background-color: rgb(255, 46, 46);
+}
+
+#btnMais{
+    background-color: rgb(0, 233, 70);
+}
+
+#btnZerar{
+    background-color: rgb(163, 93, 255);
+    font-size: 18px;
+}
+
+#btnMenos:hover{
+    background-color: rgb(202, 37, 37);
+    transform: scale(1.05);
+}
+
+#btnMais:hover{
+    background-color: rgb(0, 158, 47);
+    transform: scale(1.05);
+}
+
+#btnZerar:hover{
+    background-color: rgb(115, 65, 180);
+    transform: scale(1.05);
+}
