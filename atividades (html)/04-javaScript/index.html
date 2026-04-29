@@ -13,7 +13,7 @@
         <h2>Exercício 01</h2>
         <h3>Contador Simples</h3>
         <p><span>Objetivo:</span> Criar um contador com botão +1, botão -1 e reset</p>
-        <div id="ex01">
+        <div class="exercicio">
             <h3>Contador</h3>
             <p id="contador">0</p>
             <div class="grupoBotoes">
@@ -23,9 +23,36 @@
             </div>
         </div>
     </div>
+
+    <div class="card">
+        <h2>Exercício 02</h2>
+        <h3>Seletor de cores</h3>
+        <p><span>Objetivo:</span> Selecionar uma cor no color picker e aplicá-la a um quadrado</p>
+
+        <div class="exercicio">
+          <label>Escolha uma cor:</label>
+          <input type="color" id="colorPicker" placeholder="Selecione uma cor..." oninput="mudarCor()"/>
+          <div id="quadrado"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Exercício 03</h2>
+        <h3>Calculadora simples</h3>
+        <p><span>Objetivo:</span> Criar uma calculadora que realize as operações de soma, subtração, multiplicação e divisão</p>
+        <div class="exercicio">
+            <input type="number" placeholder="Número 1" id="num1">
+            <input type="number" placeholder="Número 2" id="num2">
+            <div class="grupoBotoes">
+                <button id="btnSoma" onclick="somar()">+</button>
+                <button id="btnSubtracao" onclick="subtrair()">-</button>
+                <button id="btnMultiplicacao" onclick="multiplicar()">x</button>
+                <button id="btnDivisao" onclick="dividir()">/</button>
+            </div>
+            <p id="resultado"></p>
+        </div>
+    </div>
     
-
-
     <script src="js/scripts.js"></script>
 </body>
 </html>
