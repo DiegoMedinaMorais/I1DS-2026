@@ -42,3 +42,22 @@ for (let i = 0; i < numeros.length; i++) {
 }
 
 console.log(soma);
+
+// while
+
+let x = 11;
+
+while (x > 10) {
+  console.log("Entrei no laço while");
+  x = 0;
+}
+console.log("Terminei");
+
+let somar = 0;
+let num = 0;
+while (num < 10) {
+  somar += num;
+  num++;
+  console.log("Somando...", somar);
+  console.log("Número...", num);
+}

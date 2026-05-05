@@ -158,15 +158,11 @@ const exercicio7 = () => {
 
 //--------------------
 
-/*
 const exercicio8 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
   let palavra = document.getElementById("palavra");
-
-  resultado.innerHTML = resposta;
 };
-*/
 
 //--------------------
 
@@ -212,10 +208,65 @@ const exercicio11 = () => {
 
 //--------------------
 
+/*
 const exercicio12 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
   let numero = document.getElementById("numero");
+
+};
+*/
+
+//--------------------
+
+const exercicio13 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let numero1 = parseInt(document.getElementById("num1").value);
+  let numero2 = parseInt(document.getElementById("num2").value);
+
+  let resposta = " | ";
+  let a = true;
+
+  for (let i = numero1; i <= numero2; i++) {
+    for (let i2 = 2; i2 < i; i2++) {
+      if (i % i2 == 0) {
+        a = false;
+      }
+    }
+    if (i % i == 0 && i > 1 && a) {
+      resposta += i + " | ";
+    }
+    a = true;
+  }
+
+  if (numero1 == numero2 || numero1 > numero2) {
+    resultado.innerHTML = "";
+    erro.innerHTML =
+      "Os números devem ser diferentes e o primeiro número deve ser menor que o segundo.";
+  } else {
+    erro.innerHTML = "";
+    resultado.innerHTML = resposta;
+  }
+};
+
+//--------------------
+
+const exercicio14 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let lado1 = parseInt(document.getElementById("num1"));
+  let lado2 = parseInt(document.getElementById("num2"));
+
+  let resposta = `Seu retángulo tem área: ${lado1 * lado2}`;
+
+  if (lado1 <= 0 || lado2 <= 0) {
+    resultado.innerHTML = "";
+    erro.innerHTML = "Digite números maiores que 0";
+  } else {
+    erro.innerHTML = "";
+    resultado.innerHTML = resposta;
+  }
 };
 
 //--------------------
@@ -223,15 +274,74 @@ const exercicio12 = () => {
 const exercicio16 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
-  let numero = document.getElementById("num1").value;
+  let raio = parseInt(document.getElementById("num1").value);
 
-  if (numero <= 0) {
+  if (raio <= 0) {
     erro.innerHTML = "Digite um número maior que 0";
     resultado.innerHTML = "";
   } else {
     erro.innerHTML = "";
-    resultado.innerHTML = Math.PI * parseFloat(numero) * parseFloat(numero);
+    resultado.innerHTML = Math.PI * raio * raio;
   }
 };
 
-const exercicio25 = () => {};
+//--------------------
+
+const exercicio17 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let base = parseInt(document.getElementById("num1").value);
+  let altura = parseInt(document.getElementById("num2").value);
+
+  let resposta = `Seu triângulo tem área: ${(base * altura) / 2}`;
+
+  if (base <= 0 || altura <= 0) {
+    resultado.innerHTML = "";
+    erro.innerHTML = "Digite números maiores que 0";
+  } else {
+    erro.innerHTML = "";
+    resultado.innerHTML = resposta;
+  }
+};
+
+//--------------------
+
+const exercicio18 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let baseMaior = parseInt(document.getElementById("num1").value);
+  let baseMenor = parseInt(document.getElementById("num2").value);
+  let altura = parseInt(document.getElementById("num3").value);
+
+  let resposta = `Seu trapézio tem área: ${((baseMaior + baseMenor) * altura) / 2}`;
+
+  if (baseMaior <= 0 || baseMenor <= 0 || altura <= 0) {
+    resultado.innerHTML = "";
+    erro.innerHTML = "Digite números maiores que 0";
+  } else {
+    erro.innerHTML = "";
+    resultado.innerHTML = resposta;
+  }
+};
+
+//--------------------
+
+const exercicio25 = () => {
+  let resultado = document.getElementById("resultado");
+  let n1 = parseInt(document.getElementById("num1").value);
+  let n2 = parseInt(document.getElementById("num2").value);
+  let n3 = parseInt(document.getElementById("num3").value);
+  let erro = document.getElementById("erro");
+
+  let vetor = [n1, n2, n3]
+
+  vetor.sort((a, b) => a - b)
+  
+  if (n1 == n2 && n1 == n3 && n2 == n3) {
+    erro.innerHTML = "Use números diferentes";
+    resultado.innerHTML = "";
+  } else {
+    erro.innerHTML = "";
+    resultado.innerHTML = vetor
+  }
+};
