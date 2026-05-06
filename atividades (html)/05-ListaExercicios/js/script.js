@@ -161,7 +161,31 @@ const exercicio7 = () => {
 const exercicio8 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
-  let palavra = document.getElementById("palavra");
+  let palavra = document.getElementById("palavra").value;
+
+  // limpar os campos da tela caso tenha alguma coisa
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  // variável para armazenar a palavra invertida
+  let palavraInvertida = "";
+
+  // loop de 1 até o "tamanho" da palavra
+  for (let i = palavra.length - 1; i >= 0; i--) {
+    palavraInvertida += palavra[i];
+  }
+
+  // exibir a palavra invertida no resultado
+
+  resultado.innerHTML = `A palavra invertida é: ${palavraInvertida}`;
+  erro.innerHTML = "";
+
+  if (palavra == palavraInvertida) {
+    resultado.innerHTML += "<br/> A palavra é um palíndromo";
+  } else {
+    resultado.innerHTML += "<br/> A palavra não é um palíndromo";
+  }
 };
 
 //--------------------
@@ -180,15 +204,37 @@ const exercicio9 = () => {
 
 //--------------------
 
-/*
+let soma = 0;
+let contador = 0;
 const exercicio10 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
-  let numero = document.getElementById("numero");
+  let numero = document.getElementById("num").value;
 
-  resultado.innerHTML = resposta;
+  /*
+  if (numero != 0) {
+    soma += parseFloat(numero)
+    contador++
+  }
+
+  resultado.innerHTML = `A média dos números digitados é: ${soma/contador}`;
+  erro.innerHTML = ""
+  */
+
+  while (numero != "0") {
+    soma += parseFloat(numero);
+    contador++;
+    numero = prompt("Digite um número: ");
+  }
+
+  if (contador > 0) {
+    resultado.innerHTML = `Foram digitados ${contador} números. A média da soma dos números digitados é: ${soma / contador}`;
+    erro.innerHTML = "";
+  }
+
+  contador = 0;
+  soma = 0;
 };
-*/
 
 //--------------------
 
@@ -208,14 +254,23 @@ const exercicio11 = () => {
 
 //--------------------
 
-/*
 const exercicio12 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
-  let numero = document.getElementById("numero");
+  let numero = document.getElementById("num").value;
+  let soma = 0;
 
+  for (let i = numero.length - 1; i >= 0; i--) {
+    soma += parseInt(numero[i]);
+  }
+  if (soma > 0) {
+    resultado.innerHTML = `A soma dos dígitos desse número é: ${soma}`
+    erro.innerHTML = ""
+  } else {
+    erro.innerHTML = "Digite um número maior que 0"
+    resultado = ""
+  }
 };
-*/
 
 //--------------------
 
@@ -326,6 +381,60 @@ const exercicio18 = () => {
 
 //--------------------
 
+const exercicio20 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let frase = document.getElementById("frase").value;
+
+  // limpar os campos da tela caso tenha alguma coisa
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  // variável para armazenar a frase invertida
+  let fraseInvertida = "";
+
+  // loop de 1 até o "tamanho" da frase
+  for (let i = frase.length - 1; i >= 0; i--) {
+    fraseInvertida += frase[i];
+  }
+
+  // exibir a frase invertida no resultado
+
+  resultado.innerHTML = `A frase invertida é: ${fraseInvertida}`;
+  erro.innerHTML = "";
+};
+
+//--------------------
+
+/*
+const exercicio21 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let frase = document.getElementById("frase").value;
+
+  // limpar os campos da tela caso tenha alguma coisa
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  // variável para armazenar a frase nova
+  let fraseNova = frase;
+
+  for (let i = 0; i >= frase.length - 1; i++) {
+    if (fraseNova[i] = " ") {
+      fraseNova[i] = "";
+    }
+  }
+
+  // exibir a frase nova no resultado
+  resultado.innerHTML = `Sua frase sem espaços é: ${fraseNova}`;
+  erro.innerHTML = "";
+};
+*/
+
+//--------------------
+
 const exercicio25 = () => {
   let resultado = document.getElementById("resultado");
   let n1 = parseInt(document.getElementById("num1").value);
@@ -333,15 +442,16 @@ const exercicio25 = () => {
   let n3 = parseInt(document.getElementById("num3").value);
   let erro = document.getElementById("erro");
 
-  let vetor = [n1, n2, n3]
+  let vetor = [n1, n2, n3];
 
-  vetor.sort((a, b) => a - b)
-  
+  // sort organiza os elementos do array do jeito que eu quiser, nesse caso, ordem crescente
+  vetor.sort((a, b) => a - b);
+
   if (n1 == n2 && n1 == n3 && n2 == n3) {
     erro.innerHTML = "Use números diferentes";
     resultado.innerHTML = "";
   } else {
     erro.innerHTML = "";
-    resultado.innerHTML = vetor
+    resultado.innerHTML = vetor;
   }
 };
