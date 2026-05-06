@@ -20,7 +20,7 @@ const edit = (id) => {
     email.value = infoEmail[id-1]
 }
 
-const cadastrar = (event) => {
+const cadastrar = () => {
     // parar a propagaão padrão do evento
     event.preventDefault();
 
