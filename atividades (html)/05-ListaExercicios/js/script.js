@@ -488,6 +488,7 @@ const exercicio20 = () => {
 
 //--------------------
 
+// tentativa
 /*
 const exercicio21 = () => {
   let resultado = document.getElementById("resultado");
@@ -555,6 +556,58 @@ const exercicio22 = () => {
 
 //--------------------
 
+const exercicio23 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let palavra = document.getElementById("palavra").value;
+  let frase = document.getElementById("frase").value;
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (frase.length < 1 || palavra.length < 1) {
+    erro.innerHTML = "Digite uma frase e uma palavra para realizar a contagem.";
+    resultado.innerHTML = "";
+  } else {
+    let palavrasNaFrase = frase.split(" ");
+    let contador = 0;
+    for (let i = 0; i < palavrasNaFrase.length; i++) {
+      if (palavrasNaFrase[i] == palavra) {
+        contador++;
+      }
+    }
+    resultado.innerHTML = `A palavra "${palavra}" aparece ${contador} vez(es) na frase.`;
+    erro.innerHTML = "";
+  }
+};
+
+//--------------------
+
+const exercicio24 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let frase = document.getElementById("frase").value;
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (frase.length < 1) {
+    erro.innerHTML = "Digite uma frase para converter.";
+    resultado.innerHTML = "";
+  } else {
+    let palavras = frase.split(" ");
+    let fraseNova = palavras
+      .map((palavra) => {
+        return palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase();
+      })
+      .join(" ");
+    resultado.innerHTML = `A frase resultante é: ${fraseNova}`;
+    erro.innerHTML = "";
+  }
+};
+
+//--------------------
+
 const exercicio25 = () => {
   let resultado = document.getElementById("resultado");
   let n1 = parseInt(document.getElementById("num1").value);
@@ -565,6 +618,9 @@ const exercicio25 = () => {
   let vetor = [n1, n2, n3];
 
   // sort organiza os elementos do array do jeito que eu quiser, nesse caso, ordem crescente
+  // ordem crescente: (a, b) => a - b
+  // ordem decrescente: (a, b) => b - a
+
   vetor.sort((a, b) => a - b);
 
   if (n1 == n2 && n1 == n3 && n2 == n3) {
