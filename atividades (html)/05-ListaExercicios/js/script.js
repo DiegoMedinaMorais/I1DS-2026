@@ -25,8 +25,8 @@ const exercicio2 = () => {
     }
   }
 
-  if (numero.value <= 1) {
-    erro.innerHTML = "Digite um número maior que 1";
+  if (numero.value <= 0) {
+    erro.innerHTML = "Digite um número maior que 0";
     resultado.innerHTML = "";
   } else {
     erro.innerHTML = "";
@@ -260,15 +260,15 @@ const exercicio12 = () => {
   let numero = document.getElementById("num").value;
   let soma = 0;
 
-  for (let i = numero.length - 1; i >= 0; i--) {
+  for (let i = 0 - 1; i <= numero.length - 1; i++) {
     soma += parseInt(numero[i]);
   }
   if (soma > 0) {
-    resultado.innerHTML = `A soma dos dígitos desse número é: ${soma}`
-    erro.innerHTML = ""
+    resultado.innerHTML = `A soma dos dígitos desse número é: ${soma}`;
+    erro.innerHTML = "";
   } else {
-    erro.innerHTML = "Digite um número maior que 0"
-    resultado = ""
+    erro.innerHTML = "Digite um número maior que 0";
+    resultado = "";
   }
 };
 
@@ -277,6 +277,7 @@ const exercicio12 = () => {
 const exercicio13 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
+  // ao inves de parseInt poderia usar Number(), mesmo propósito.
   let numero1 = parseInt(document.getElementById("num1").value);
   let numero2 = parseInt(document.getElementById("num2").value);
 
@@ -321,6 +322,33 @@ const exercicio14 = () => {
   } else {
     erro.innerHTML = "";
     resultado.innerHTML = resposta;
+  }
+};
+
+//--------------------
+
+const exercicio15 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let palavra = document.getElementById("palavra").value;
+
+  let vogais = ["a", "e", "i", "o", "u"];
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (palavra.length < 1) {
+    erro.innerHTML = "Digite no mínimo uma letra";
+    resultado.innerHTML = "";
+  } else {
+    palavra = palavra.toLowerCase(); // Transforma o texto em letras minúsculas
+    for (let i = 0; i < palavra.length; i++) {
+      if (vogais.includes(palavra[i])) {
+        resultado.innerHTML += `A letra <b>${palavra[i]}</b> é uma vogal <br>`;
+      } else {
+        resultado.innerHTML += `A letra <b>${palavra[i]}</b> não é uma vogal <br>`;
+      }
+    }
   }
 };
 
@@ -377,10 +405,44 @@ const exercicio18 = () => {
     erro.innerHTML = "";
     resultado.innerHTML = resposta;
   }
+  p;
 };
 
 //--------------------
 
+const exercicio19 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let palavra = document.getElementById("palavra").value;
+  let letra = document.getElementById("letra").value;
+  let vogais = ["a", "e", "i", "o", "u"];
+  // Limpar as variaveis
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (letra.length > 1) {
+    erro.innerHTML = "Digite apenas um caracter.";
+    resultado.innerHTML = "";
+  } else if (palavra.length < 1) {
+    erro.innerHTML = "Digite uma palavra.";
+    resultado.innerHTML = "";
+  } else {
+    let palavraVetor = palavra.split(""); // Quebra a frase em varias palavras
+    for (let i = 0; i < palavraVetor.length; i++) {
+      if (vogais.includes(palavraVetor[i])) {
+        palavraVetor[i] = letra;
+      }
+    }
+    palavra = palavraVetor.join(""); // Junta novamente as palavras
+    resultado.innerHTML = `A palavra resultante é: ${palavra}`;
+    erro.innerHTML = "";
+  }
+};
+
+//--------------------
+
+// errado, inverte letras, o certo seria inverter as palavras da frase
+/*
 const exercicio20 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -403,6 +465,25 @@ const exercicio20 = () => {
 
   resultado.innerHTML = `A frase invertida é: ${fraseInvertida}`;
   erro.innerHTML = "";
+};
+*/
+
+const exercicio20 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let frase = document.getElementById("frase").value;
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (frase.length < 1) {
+    erro.innerHTML = "Digite uma palavra";
+    resultado.innerHTML = "";
+  } else {
+    let fraseInvertida = frase.split(" ").reverse().join(" ");
+    resultado.innerHTML = `A frase resultante é ${fraseInvertida}`;
+    erro.innerHTML = "";
+  }
 };
 
 //--------------------
@@ -432,6 +513,45 @@ const exercicio21 = () => {
   erro.innerHTML = "";
 };
 */
+
+const exercicio21 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let frase = document.getElementById("frase").value;
+
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+
+  if (frase.length < 1) {
+    erro.innerHTML = "Digite uma palavra";
+    resultado.innerHTML = "";
+  } else {
+    let novaFrase = frase.split(" ").join("");
+    resultado.innerHTML = `A frase resultante é ${novaFrase}`;
+    erro.innerHTML = "";
+  }
+};
+
+//--------------------
+
+soma = 0;
+contador = 0;
+const exercicio22 = () => {
+  let resultado = document.getElementById("resultado");
+  let erro = document.getElementById("erro");
+  let numero = document.getElementById("num").value;
+  // Limpar as variaveis
+  erro.innerHTML = "";
+  resultado.innerHTML = "";
+  if (soma < 100) {
+    soma += parseFloat(numero);
+    resultado.innerHTML = `A soma dos números digitados é: ${soma}`;
+    erro.innerHTML = "";
+  } else {
+    resultado.innerHTML = `A soma já atingiu o limite de 100, o total é: ${soma}`;
+    erro.innerHTML = "";
+  }
+};
 
 //--------------------
 
