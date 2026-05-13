@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetShop Amigo Fiel</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -21,63 +18,165 @@
     <header>
       <div class="logo">
         <img
-          src="img/logo-transparente.png"
-          alt="Logotipo do petshop amigo fiél"
+          src="img/logo2.png"
+          alt="Logotipo do petshop amigo fiel"
           width="100"
         />
       </div>
+
       <button id="menu-btn">☰</button>
+
       <nav id="menu">
         <a href="#home">Home</a>
         <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
         <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
         <a href="#localizacao">Localização</a>
+        <a href="sobre.html">Sobre nós</a>
       </nav>
     </header>
+
+    <button id="tema-btn">Modo dark</button>
 
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-content">
         <h1>Cuidando do seu melhor amigo</h1>
-        <p>Banho, tosa, veterinário e muito carinho</p>
-        <a href="#contato" class="btn">Agendar agora</a>
+        <p>Banho, tosa, veterinário e muito carinho.</p>
+        <a href="#contato" class="btn">Agendar Agora</a>
       </div>
     </section>
 
     <!-- SERVIÇOS -->
     <section id="servicos" class="container">
-      <h2>Nossos serviços</h2>
+      <h2>Nossos Serviços</h2>
       <div class="cards">
         <div class="card">
           <img src="img/banho.png" alt="Serviço de banho" />
           <h3>Banho</h3>
           <p>Banho completo e hidratação.</p>
         </div>
+
         <div class="card">
           <img src="img/tosa.png" alt="Serviço de tosa" />
           <h3>Tosa</h3>
           <p>Tosa profissional para seu pet.</p>
         </div>
+
         <div class="card">
-          <img src="img/veterinario.png" alt="Serviços de veterinário" />
+          <img src="img/veterinario.png" alt="Serviço de Veterinário" />
           <h3>Veterinário</h3>
           <p>Consultas e vacinas.</p>
         </div>
       </div>
     </section>
 
+    <!-- PRODUTOS -->
+    <section id="produtos" class="container">
+      <h2>Produtos</h2>
+      <div class="cardsP">
+        <div class="cardP">
+          <img src="img/racao.jpg" alt="Imagem do produto" />
+          <h3>Ração Special Dog Carne 15Kg</h3>
+          <p>R$97,11</p>
+        </div>
+
+        <div class="cardP">
+          <img src="img/shampoo.jpg" alt="Imagem do produto" />
+          <h3>Beeps Shampoo Neutro 500ml Beeps para Cães</h3>
+          <p>R$33,99</p>
+        </div>
+
+        <div class="cardP">
+          <img src="img/condicionador.jpg" alt="Imagem do produto" />
+          <h3>Granado Condicionador Pet Desembaraçador</h3>
+          <p>R$45,51</p>
+        </div>
+
+        <div class="cardP">
+          <img src="img/macaco.jpg" alt="Imagem do produto"/>
+          <h3>Brinquedo Macaco Chalesco para Cães</h3>
+          <p>R$25,19</p>
+        </div>
+
+        <div class="cardP">
+          <img src="img/brinquedo.jpg" alt="Imagem do produto">
+          <h3>Brinquedo Gato Varinha Pássaro Com Ventosa Fixa</h3>
+          <p>R$29,90</p>
+        </div>
+
+        <div class="cardP">
+          <img src="img/sache.webp" alt="Imagem do produto">
+          <h3>Sachê Whiskas 85g - Carne - Gatos Adultos</h3>
+          <p>R$3,50</p>
+        </div>
+      </div>
+    </section>
+
     <!-- GALERIA -->
-    <section id="galeria" class="container"></section>
+    <section id="galeria" class="container">
+      <h2>Galeria de Fotos</h2>
+      <div class="galeria">
+        <img src="img/tosa.png" alt="Foto de tosa" />
+        <img src="img/pets.png" alt="Foto de pets" />
+        <img src="img/banho.png" alt="Foto de banho" />
+        <img src="img/veterinario.png" alt="Foto de veterinário" />
+      </div>
+    </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="container"></section>
+    <section id="contato" class="container">
+      <h2>Entre em Contato</h2>
+      <form id="formContato">
+        <input
+          type="text"
+          placeholder="Digite seu Nome..."
+          id="nome"
+          name="nome"
+        />
+
+        <input
+          type="email"
+          placeholder="Digite seu E-mail.."
+          id="email"
+          name="email"
+        />
+
+        <textarea
+          placeholder="Digite sua Mensagem..."
+          id="mensagem"
+          name="mensagem"
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
 
     <!-- MAPA -->
-    <section id="localizacao" class="container"></section>
+    <section id="localizacao" class="container">
+      <h2>Como Chegar</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1557.6197499290356!2d-48.173237430566296!3d-21.79322353879276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f3e5bd0551f3%3A0x60445b0d94f11583!2sPet%20shop%20Amigo%20Fiel!5e0!3m2!1spt-BR!2sbr!4v1778673910707!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer>
+      <p>&copy; 2026 PetShop Amigo Fiel. Todos os direitos reservados.</p>
+      <p>
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="https://www.whatsapp.com/">WhatsApp</a> |
+        <a href="https://www.facebook.com">Facebook</a>
+      </p>
+      <a href="sobre.html">Sobre nós</a>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
