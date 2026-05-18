@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketMaint</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>TicketMaint</h1>
+
+    <form id="formChamado">
+
+      <input type="text"
+      id="maquina"
+      placeholder="Máquina"
+      required>
+
+      <input type="text"
+      id="setor"
+      placeholder="Setor"
+      required>
+
+      <select id="gravidade">
+
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
+        <option>Crítica</option>
+
+      </select>
+
+      <textarea
+      id="descricao"
+      placeholder="Descreva o problema"
+      required></textarea>
+
+      <button type="submit">
+        Solicitar Suporte
+      </button>
+
+    </form>
+
+    <div id="listaChamados"></div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
