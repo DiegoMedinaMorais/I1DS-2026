@@ -8,6 +8,10 @@
   --radius: 20px;
 }
 
+@media (prefers-color-scheme: dark) {
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +40,8 @@ body {
     url("../img/fundoDark.png");
   --texto: #ffffff;
   --escuro: #ffffff;
-  --primaria: #72ad57;
-  --secundaria: #ceae62;
+  --primaria: #7a9f69;
+  --secundaria: #c6b282;
 }
 
 .dark header {
@@ -185,7 +189,7 @@ nav a:hover {
   overflow: hidden;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transform: 0.4s;
+  transition: 0.4s;
 }
 .card:hover {
   transform: translateY(-12px);
@@ -304,7 +308,7 @@ button {
 }
 
 button:hover {
-  background: #026fa6;
+  transform: scale(1.05);
 }
 
 /* RODAPE */
@@ -416,5 +420,6 @@ iframe {
 
 #tema-btn:hover{
   transform: scale(1.1);
+  background-color: rgb(178, 178, 178);
 }
 
