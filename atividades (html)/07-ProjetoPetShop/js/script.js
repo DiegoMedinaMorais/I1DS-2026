@@ -32,10 +32,10 @@ let dark = false
 botaoTema.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     if (dark == false) {
-      botaoTema.innerHTML = "Modo light"
+      botaoTema.innerHTML = "☀️ Modo light"
       dark = true
     } else {
-      botaoTema.innerHTML = "Modo dark"
+      botaoTema.innerHTML = "🌙 Modo dark"
       dark = false
     }
 });

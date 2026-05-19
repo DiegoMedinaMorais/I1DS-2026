@@ -26,14 +26,14 @@ body {
     url("../img/fundo.png");
 
   background-attachment: fixed;
-  background-size: 500px;
+  background-size: 1500px;
 }
 
 /* MODO DARK */
 .dark{
   background:
-    linear-gradient(rgba(17, 20, 35, 0.952), rgba(19, 20, 37, 0.967)),
-    url("../img/fundo.png");
+    linear-gradient(rgba(11, 13, 22, 0.93), rgba(11, 13, 22, 0.96)),
+    url("../img/fundoDark.png");
   --texto: #ffffff;
   --escuro: #ffffff;
   --primaria: #72ad57;
@@ -41,19 +41,19 @@ body {
 }
 
 .dark header {
-  background-color: #282d3d
+  background-color: #1c2234
 }
 
 .dark footer {
-  background-color: #282d3d
+  background-color: #1c2234
 }
 
 .dark #produtos .cardsP .cardP {
-  background-color: #282d3d
+  background-color: #1c2234
 }
 
 .dark #servicos .cards .card {
-  background-color: #282d3d
+  background-color: #1c2234
 }
 
 .dark .produtos .cardsP .cardP {
@@ -65,14 +65,13 @@ body {
 }
 
 .dark #contato #formContato input {
-  background-color: #3b435c;
+  background-color: #1c2234
   border: 3px solid #0000006c;
 }
 
 .dark #contato #formContato textarea {
-  background-color: #3b435c;
-  border: 3px solid #0000006c;
-  color: #ffffffb7;
+  background-color: #1c2234
+  border: 3px solid #000000;
 }
 
 /* HEADER */
@@ -223,20 +222,19 @@ nav a:hover {
   height: 390px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transform: 0.4s;
+  transition: 0.4s;
 }
 .cardP:hover {
   transform: translateY(-12px);
 }
 .cardP img {
   padding: 25px;
-  width: auto;
-  height: auto;
-  max-width: 400px;
+
+  max-width: 100%;
   max-height: 250px;
+
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .cardP h3 {
   padding: 20px 20px 10px;
